@@ -29,12 +29,13 @@ class Menu {
     deleteList(){
         if(this.lists.length === 0){
             alert(`You don't have any lists to delete`);
-        }
+        } else{
 
-        let selection = prompt(`Please choose the index of the list you wish to delete: \n${this.viewLists()}`);
+            let selection = prompt(`Please choose the index of the list you wish to delete: \n${this.viewLists()}`);
 
-        if(selection > -1 && selection < this.lists.length){
-            this.lists.splice(selection, 1);
+            if(selection > -1 && selection < this.lists.length){
+                this.lists.splice(selection, 1);
+            }
         }
         /*
         This method checks if there are any lists to delete, if not, it will inform the user that there are no lists to delete
@@ -159,12 +160,13 @@ class List {
     deleteItem(){
         if(this.items.length === 0){
             alert(`You don't have any items to delete`);
-        }
+        } else{
 
-        let selection = prompt(`Please choose the index of the item you wish to delete: \n${this.viewItems()}`);
+            let selection = prompt(`Please choose the index of the item you wish to delete: \n${this.viewItems()}`);
 
-        if(selection > -1 && selection < this.items.length){
-            this.items.splice(selection, 1);
+            if(selection > -1 && selection < this.items.length){
+                this.items.splice(selection, 1);
+            }
         }
         /**
          * This method allows the user to remove an item from their list.
